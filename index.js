@@ -11,7 +11,7 @@ const Job = require('./models/job');
 const multer = require('multer');
 require('dotenv').config();
 
-
+let port = process.env.PORT || 3005;
 
 const username = process.env.DB_USER_NAME;
 const pass = process.env.DB_PASSWORD;
@@ -164,6 +164,6 @@ app.post('/postJob',upload.single('company-logo') , async (req, res)=>{
 
 
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server listening on port ${process.env.PORT}`);
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
