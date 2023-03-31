@@ -60,7 +60,7 @@ app.get('/applyToJob/:id', async (req, res) => {
 });
 
 
-app.get('/mainPage', async (req,res)=>{
+app.get('/', async (req,res)=>{
 
   
   try {
