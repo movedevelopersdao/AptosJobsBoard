@@ -620,7 +620,7 @@ color: #747DCF;
                 </div>
             </div>
             <div class="links">
-                <div class="link-box"><a href="/newJob" onclick="return false" class="link">Post Job</a></div>
+                <div class="link-box"><a onclick="openNewJob()" class="link">Post Job</a></div>
                 <div class="link-box"><a href="" class="link">SignUp</a></div>
                 <div class="link-box"><a href="#" onclick="return false" class="link">Find a job</a></div>
                 <div class="link-box"><a href="" class="link">Hire Talent</a></div>
@@ -708,6 +708,9 @@ color: #747DCF;
           let link = '/job-preview/'+jobId;
           window.open(link, '_self');
           // console.log("helllllllllllllllllllll");
+        }
+        function openNewJob(){
+            window.open('/newJob', '_self');
         }
 
     </script>
