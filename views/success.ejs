@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Job Application Submitted</title>
+  <style>
+    /* Add some basic styles for the response page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    
+.button {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+  </style>
+</head>
+<body>
+    <div class="container">
+      <h1>Job Application Submitted</h1>
+      <table>
+        <tr>
+          <th>Name</th>
+          <td><%= jobApplication.name %></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><%= jobApplication.email %></td>
+        </tr>
+        <tr>
+          <th>Years of Experience</th>
+          <td><%= jobApplication.experience %></td>
+        </tr>
+        <tr>
+          <th>Github</th>
+          <td><%= jobApplication.github %></td>
+        </tr>
+        <tr>
+          <th>LinkedIn</th>
+          <td><%= jobApplication.linkedin %></td>
+        </tr>
+        
+      </table>
+      
+    </div>
+    <p id="resumeLink" hidden><%= jobApplication.resume %></p>
+    <script>
+        
+    </script>
+  </body>
+  </html>

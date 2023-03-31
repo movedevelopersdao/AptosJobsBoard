@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background: url('/assets/Background.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    .nav-bar {
+        margin: 10px 10px;
+        display: flex;
+        
+        justify-content:space-between;
+    }
+
+    .logo-img{
+        margin: 10px 10px;
+    }
+
+    .post-job-section{
+        
+        margin: 10px 10px;
+        padding: 10px 10px;
+    }
+
+    .post-job-form{
+        
+        margin: 10px 10px;
+        padding: 20px 20px;
+    }
+
+    .post-job-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 52px;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #000000;
+    }
+
+    form{
+        padding: 20px 20px;
+    }
+
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .submit{
+        display: flex;
+        justify-content: center;
+    }
+
+    .submit-btn{
+        background: #263238;
+        border-radius: 20px;
+        font-family: 'Poppins';
+        font-size:25px;
+        color: white;
+        padding: 10px 30px;
+    }
+
+    
+    input{
+        font-family: 'Poppins';
+        font-size:25px;
+        margin: 10px 10px;
+        border-radius: 20px;
+        padding: 10px 10px;
+        border: 1px solid #263238;
+        background: transparent;
+        width: 500px;
+    }
+
+    ::-webkit-input-placeholder {
+        color:  black;
+        font-weight: 600;
+    }
+
+    .responsibilities{
+      display: flex;
+      flex-direction: column;
+    }
+
+    #responsibilities-container{
+      display: flex;
+      flex-direction: column ;
+    }
+
+    #keywords-container{
+      display: flex;
+      flex-direction: column ;
+    }
+
+    .resBtn{
+      font-family: 'Poppins';
+      display: block;
+      margin: auto;
+      background: #263238;
+      color: white;
+      border-radius: 15px;
+      padding: 5px 10px;
+      border: none;
+    }
+
+
+    @media screen and (max-width:1200px) {
+        body {
+            background: url('/assets/Background-for-1200.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width:500px){
+        body {
+        background: url('/assets/13\ Pro\ -\ 1.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+        input{
+            width: 400px;
+        }
+    }
+
+    @media screen and (max-width:450px){
+        input{
+            width: 300px;
+            font-size: 18px;
+        }
+        .submit-btn{
+            font-size: 18px;
+        }
+        .post-job-title{
+            font-size: 28px;
+        }
+        .logo-img{
+            width: 45px;
+        }
+    }
+
+    @media screen and (max-width:350px){
+        input{
+            width: 250px;
+            font-size: 15px;
+        }
+        .submit-btn{
+            font-size: 15px;
+        }
+        .post-job-title{
+            font-size: 25px;
+        }
+        
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <img onclick="openMainPage()" src="/assets/logo 1.png" alt="" class="logo-img">
+        
+    </nav>
+
+    <div class="post-job-section">
+        <div class="post-job-head">
+            <h1 class="post-job-title">Post A Job</h1>
+        </div>
+
+        <div class="post-job-form">
+            <form action="/postJob" class="pj-form" method="POST"  enctype="multipart/form-data">>
+                <div class="inputs">
+                    <div class="input"><input type="text" class="form-control" id="title" name="title" required placeholder="Company Name"></div>
+                    <div class="input"><input type="text" class="form-control" id="role" name="role" required placeholder="Role"></div>
+                    <div class="input"><input type="text" class="form-control" id="description" name="description" required placeholder="Description"></div>
+                    <div class="input"><input type="text" class="form-control" id="compensation" name="compensation" required placeholder="Compensation per month"></div>
+                    <div class="input"><input type="text" class="form-control" id="location" name="location" placeholder="Location"></div>
+                    <div class="input"><input type="text" class="form-control" id="type" name="type" placeholder="Type (fullTime/remote)"></div>
+                    <div class="input"><input type="text" class="form-control" id="mail" name="email" placeholder="Mail"></div>
+                    <!-- <div class="input"><input type="text" class="form-control" id="companyLink" name="comanyLink" placeholder="comanyLink"></div> -->
+                    <div class="input"><input type="text" class="responsibilities" name="responsibilities[]" id="responsibilities" required placeholder="responsibilities">
+                      <button type="button" class="resBtn" onclick="addResponsibility()">Add Responsibility</button>
+                      <div id="responsibilities-container"></div></div>
+                      <div class="input"><input type="text" class="responsibilities" name="keywords[]" id="keywords" required placeholder="keywords(tech/backend/frontend)">
+                        <button type="button" class="keyBtn resBtn" onclick="addKeywords()">Add keyword</button>
+                        <div id="keywords-container"></div></div>
+                    <div class="input"><input type="file" class="form-control-file" id="photo" name="company-logo" accept="image/*" placeholder="Logo if available"><p class="upload-logo" style="margin: 0px 0px;font: 'Poppins';text-align: center;position: relative;bottom: 8px;">(upload Company Logo)</p></div>
+                </div>
+
+                <div class="submit">
+            
+                    <button class="submit-btn" id="application-form">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+      function addResponsibility() {
+        const container = document.getElementById("responsibilities-container");
+        const input = document.createElement("input");
+        input.type = "text";
+        input.name = "responsibilities[]";
+        input.required = true;
+        input.placeholder = "responsibilities"
+        container.appendChild(input);
+      }
+      function addKeywords() {
+        const container = document.getElementById("keywords-container");
+        const input = document.createElement("input");
+        input.type = "text";
+        input.name = "responsibilities[]";
+        input.required = true;
+        input.placeholder = "keywords(tech/backend/frontend)"
+        container.appendChild(input);
+      }
+
+      function openMainPage(){
+  window.open('/mainPage', '_self');
+    }
+
+    const form = document.getElementById('application-form');
+
+    form.addEventListener('click',(event)=>{
+    
+    const title = document.getElementById('title');
+    const role = document.getElementById('role');
+    const description = document.getElementById('description');
+    const compensation = document.getElementById('compensation');
+    const location = document.getElementById('location');
+    const type = document.getElementById('type');
+    const mail = document.getElementById('mail');
+    const responsibilities = document.getElementById('responsibilities');
+    const keywords = document.getElementById('keywords');
+    const photo = document.getElementById('photo');
+
+    if (!title || !role || !description || !compensation || !location || !type || responsibilities.length == 0 || keywords.length == 0 || photo.value.length == 0)  {
+        alert("All fields are required fields.");
+        event.preventDefault();
+        return;
+    }
+
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    console.log(mail.value.match(emailRegex));
+    if (!mail.value.match(emailRegex)) {
+      alert("Email is not valid.");
+      event.preventDefault();
+      return
+    }
+    })
+    </script>
+
+    
+    
+</body>
+</html>

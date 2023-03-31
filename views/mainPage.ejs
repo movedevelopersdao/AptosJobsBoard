@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Aptos Jobs Board</title>
+
+    <style>
+      body {
+    margin: 0 0;
+}
+.hero-section {
+    background: url('/assets/Background-for-1200.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.logo-hamburger {
+    flex-grow: 4;
+}
+
+.logo {
+    flex-grow: 2;
+}
+
+.hamburger {
+    display: none;
+}
+
+.links {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+    flex-grow: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all;
+}
+a:link {
+    color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+.link-box {
+    border-radius: 18px;
+    border: 2px solid black;
+    padding: 12px 20px;
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+.link-box:hover {
+    background: black
+}
+.link-box:hover a {
+    color: white;
+}
+.aptos-img {
+    position: relative;
+    top: 3px;
+    height: 50px;
+}
+
+.title {
+    margin: 80px 0;
+}
+
+.title-heading {
+    font-family: 'Inter';
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    padding-bottom: 80px;
+}
+
+.search-field{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: white;
+    margin-right: 10px;
+}
+
+.icon {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+
+
+.input-field {
+
+    padding: 10px 30px 10px 15px ;
+    font: 'Inter';
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid #263238;
+    border-radius: 20px;
+    border: none;
+
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+button{
+    background-color: #263238;
+    color: white;
+    padding: 10px 35px;
+    font: 'Inter';
+    font-size: 15px;
+    border-radius: 20px;
+}
+/* .form-element {
+    margin-left: 20px;
+    width: 278px;
+
+} */
+
+/* ::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 20px;
+}
+
+:-moz-placeholder {
+    text-align: center;
+    font-size: 20px;
+} */
+
+
+
+.job-box{
+    display: flex;
+    border-bottom: 1px solid gray;
+    margin: 0px 20px;
+
+}
+
+.job-display{
+    
+    margin: 30px 30px;
+    padding: 20px 70px;
+}
+
+.job-description{
+    padding: 10px 10px;
+    flex-grow: 3;
+}
+
+.company-logo-box .company-logo-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: grey;
+    flex-grow: 1;
+
+}
+
+.company-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 10px 30px;
+}
+
+
+.read-more{
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-details{
+    display: flex;
+    /* justify-content: center; */
+    
+}
+
+.jd-box{
+    display: flex;
+    margin: 10px 0px;
+    margin-right: 10px;
+}
+
+.jd-img{
+    height: 20px;
+    width: 20px;
+}
+
+.jd-img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    margin-right: 10px;
+}
+
+.jd-img-desc{
+    text-align: center;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 160%;
+color: #000000;
+
+
+
+}
+
+.job-title{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 160%;
+/* or 38px */
+margin-bottom: 0px;
+
+
+color: #000000;
+}
+
+.read-more-title{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 160%;
+/* identical to box height, or 29px */
+
+
+color: #747DCF;
+}
+
+
+@media screen and (max-width: 900px){
+    .job-display{
+    
+        
+        padding: 20px 0px;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .aptos-img {
+        height: 40px;
+    }
+
+    .title-heading {
+
+        font-size: 40px;
+
+
+    }
+
+}
+
+@media screen and (max-width: 750px){
+    .job-title{
+        font-size: 20px;
+    }
+    .company-logo{
+        margin: 10px 10px;
+    }
+    .jd-img-desc{
+        font-size: 15px;
+    }
+    .read-more-title{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .logo-hamburger {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin: auto 0 auto auto;
+    }
+
+    .hamburger .line {
+        width: 25px;
+        height: 2px;
+        background: black;
+        margin: 6px 0;
+    }
+
+    .logo-img {
+        width: 65px;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        top: 80px;
+        left: 0;
+        right: 0;
+        transition: 0.5s;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .active {
+        height: 400px;
+        opacity: 1;
+    }
+
+    .input-field{
+        padding: 10px 20px 10px 10px;
+        font-size: 13px ;
+    }
+
+
+}
+
+@media screen and (max-width: 650px){
+    .job-title{
+        font-size: 18px;
+        
+    }
+    .company-logo{
+        padding: 0px 0px;
+    }
+    .jd-img-desc{
+        font-size: 13px;
+    }
+    .read-more-title{
+        font-size: 13px;
+    }
+    .company-logo-box .company-logo-img{
+        height: 80px;
+        width: 80px;
+    }
+
+    .jd-img-box{
+        margin-right: 0px;
+    }
+
+    .input-field{
+        padding: 10px 10px 10px 10px;
+        font-size: 12px ;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .hero-section {
+        background: url('/assets/bg-mob.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    .job-display{
+        margin: 30px 15px;
+    }
+    .job-title{
+        font-size: 15px;
+        
+    }
+    
+    .jd-img-desc{
+        font-size: 11px;
+    }
+    .read-more-title{
+        font-size: 11px;
+    }
+
+    .search-form{
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        position: relative;
+        bottom: 30px;
+        /* left: 10px; */
+    }
+    .search-field{
+        width: 250px;
+        margin-top: 20px;
+        
+    }
+    button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 13px;
+        border: none;
+        
+        
+    }
+    
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    
+
+    .aptos-img {
+        height: 35px;
+    }
+
+    .title-heading {
+
+        font-size: 35px;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 460px){
+    .hero-section {
+        background: url('/assets/bg-mob.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    .job-title{
+        margin-bottom: 0px;
+    }
+    .jd-img{
+        height: 18px;
+        width: 18px;
+    }
+    .job-title{
+        font-size: 13px;
+        
+    }
+    
+    .jd-img-desc{
+        font-size: 10px;
+    }
+    
+    .read-more-title{
+        font-size: 10px;
+    }
+
+    .company-logo-box .company-logo-img{
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    
+    .company-logo-box .company-logo-img{
+        height: 80px;
+        width: 80px;
+    }
+
+    .read-more{
+        display: none;
+    }
+    .job-title{
+        font-size: 18px;
+    }
+    .jd-img-desc{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .logo-img {
+        width: 45px;
+    }
+
+    .hamburger .line {
+        width: 20px;
+        /* height: 1px; */
+    }
+
+    .aptos-img {
+        height: 30px;
+    }
+
+    .title-heading {
+
+        font-size: 30px;
+
+
+    }
+
+    .links {
+
+        font-weight: 450;
+        font-size: 13px;
+
+
+
+    }
+
+    .link-box {
+        padding: 8px 15px;
+
+    }
+
+    .active {
+        height: 300px;
+    }
+
+    .jd-img-desc{
+        font-size: 8px;
+        position: relative;
+        top: 3px;
+    }
+    .jd-img{
+        width: 15px;
+        height: 15px;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 350px){
+
+    .hero-section {
+        background: url('/assets/bg-350\(1\).png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    .job-title{
+        font-size: 15px;;
+    }
+    .company-logo-box .company-logo-img{
+        width: 65px;
+        height: 65px;
+    }
+    .jd-img-desc{
+        font-size: 7px;
+        top:4px
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+
+    .aptos-img {
+        height: 20px;
+    }
+
+    .title-heading {
+
+        font-size: 20px;
+}
+
+.job-details{
+    display: none;
+}
+
+
+
+}
+    </style>
+    
+</head>
+
+
+
+<body>
+    <div class="hero-section">
+        <nav class="nav-bar">
+            <div class="logo-hamburger">
+                <div class="logo">
+                    <img class="logo-img" src="/assets/logo 1.png" alt="">
+                </div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="links">
+                <div class="link-box"><a href="/newJob" onclick="return false" class="link">Post Job</a></div>
+                <div class="link-box"><a href="" class="link">SignUp</a></div>
+                <div class="link-box"><a href="#" onclick="return false" class="link">Find a job</a></div>
+                <div class="link-box"><a href="" class="link">Hire Talent</a></div>
+            </div>
+
+        </nav>
+        <div class="title">
+            <!-- <img class="title-img" src="./Group 1.png" alt=""> -->
+            <h1 class="title-heading">Find Jobs in <span><img class="aptos-img" src="/assets/aptos-img.png" alt=""></span>
+                Ecosystem</h1>
+        </div>
+
+        <div class="search-bars">
+
+            <form class="search-form" action="/search">
+
+                <div class="search-field">
+                    <div class="search-icon icon"><img src="/assets/search-icon.png" alt="" class="search-img icon-img"></div>
+                    <input class="input-field form-element" type="text" name="title" placeholder="Title/Role/KeyWords">
+                </div>
+
+                <div class="search-field">
+                    <div class="search-icon icon"><img src="/assets/location-icon.png" alt="" class="search-img icon-img"></div>
+                    <input class="input-field form-element" name="location" placeholder="Location">
+                </div>
+
+                <div class="submit">
+                    <button type="submit-btn">Search</button>
+                </div>
+                
+                
+            </form>
+
+        </div>
+    </div>
+
+    <div class="job-display">
+      <% jobs.forEach(job => { %>
+        <div class="job-box" onclick="openJobPreview('<%= job.id %>')">
+            <div class="company-logo">
+                <div class="company-logo-box">
+                  <img class="company-logo-img" src="/uploads/companies-logo/<%= job.photo %>" alt="Job Photo">
+                </div>
+            </div>
+            <div class="job-description">
+                <h1 class="job-title"><%= job.title %></h1>
+                <div class="job-details">
+                    <div class="job-area jd-box">
+                        <div class="jd-img-box">
+                            <img  class="jd-img" src="/assets/💻 Laptop.png" alt="">
+                        </div>
+                        <p class="jd-img-desc">Tech</p>
+                    </div>
+                    <div class="job-type jd-box">
+                        <div class="jd-img-box">
+                            <img  class="jd-img" src="/assets/⏰ Alarm clock.png" alt="">
+                        </div>
+                        <p class="jd-img-desc"><%= job.type%></p>
+                    </div>
+                    <div class="job-location jd-box">
+                        <div class="jd-img-box">
+                            <img  class="jd-img" src="/assets/Earth.png" alt="">
+                        </div>
+                        <p class="jd-img-desc"><%= job.location %></p>
+                    </div>
+                </div>
+            </div>
+            <div class="read-more">
+            <a href="/job-preview/<%= job.id %>"><p class="read-more-title">Read More ></p></a>
+            </div>
+        </div>
+        <% }); %>
+
+
+    </div>
+
+    <script>
+        let hamburger = document.querySelector('.hamburger');
+        hamburger.onclick = function () {
+            let links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+
+        function openJobPreview(jobId){
+          let link = '/job-preview/'+jobId;
+          window.open(link, '_self');
+          // console.log("helllllllllllllllllllll");
+        }
+
+    </script>
+</body>
+
+</html>

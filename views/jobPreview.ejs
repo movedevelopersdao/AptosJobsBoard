@@ -1,0 +1,336 @@
+
+
+<!-- ---------------------------------------------- -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: url('/assets/Background.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    .nav-bar {
+        margin: 10px 10px;
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    .logo-img {
+        margin: 10px 10px;
+    }
+
+    .job-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 52px;
+        /* identical to box height */
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+
+        color: #000000;
+    }
+
+    .key-words {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 48px;
+        /* identical to box height */
+        margin-bottom: 15px;
+        margin-top: 15px;
+
+        text-align: center;
+
+        color: #000000;
+    }
+
+    .location {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 40px;
+        /* identical to box height */
+        margin-bottom: 15px;
+        margin-top: 15px;
+        text-align: center;
+
+        color: #000000;
+    }
+
+    .job-details{
+        margin: 20px 20px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .jb-box{
+        padding: 10px 20px;
+
+        border: 1px solid black;
+        border-radius: 20px;
+        margin: 20px 20px;
+        width: 1200px;
+    }
+
+
+
+    .description-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 32px;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #000000;
+
+        opacity: 0.7;
+    }
+
+    .job-description{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 32px;
+text-align: center;
+
+color: #000000;
+
+opacity: 0.7;
+    }
+
+    .skill{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 32px;
+
+
+color: #000000;
+
+opacity: 0.7;
+    }
+
+
+    .apply{
+      margin: 20px 0px;
+    }
+    .apply-btn{
+      font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 32px;
+        /* identical to box height */
+        background: #263238;
+        text-align: center;
+        padding: 10px 20px;
+        color: #FFFFFF;
+        display: block;
+        margin: auto;
+        border-radius: 15px;
+    }
+
+    @media screen and (max-width:1200px) {
+        body {
+            background: url('/assets/Background-for-1200.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+
+        .jb-box{
+            width: 800px;
+        }
+    }
+
+    @media screen and (max-width:1000px){
+        .jb-box{
+            width: 600px;
+        }
+    }
+    @media screen and (max-width:750px){
+        .jb-box{
+            width: 500px;
+        }
+        .job-title{
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .key-words{
+            font-size: 25px;
+        }
+        
+        .location{
+            font-size: 20px;
+        }
+        .job-description{
+            font-size: 18px;
+            line-height: 35px;
+        }
+        .description-title{
+            font-size: 20px;
+        }
+        .skill{
+            font-size: 18px;
+        }
+
+    }
+    @media screen and (max-width:600px){
+        .jb-box{
+            width: 400px;
+        }
+        
+    }
+
+    @media screen and (max-width:500px){
+        body {
+        background: url('/assets/13\ Pro\ -\ 1.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+        .jb-box{
+            width: 350px;
+        }
+
+        .apply-btn{
+            font-size: 18px ;
+            padding: 10px 15px;
+        }
+       
+
+    }
+
+    @media screen and (max-width:450px){
+        .profile-detail-box{
+            width: 300px;
+        }
+        
+
+    }
+
+    @media screen and (max-width:400px){
+        .jb-box{
+            width: 250px;
+        }
+        .job-title{
+            font-size: 25px;
+            line-height: 30px;
+            margin: 10px 0px;
+        }
+        .key-words{
+            font-size: 20px;
+            margin: 10px 0px;
+        }
+        .location{
+            font-size: 15px;
+            margin: 10px 0px;
+        }
+        .skill{
+            font-size: 15px;
+        }
+        .job-description{
+            font-size: 12px;
+            line-height: 30px;
+        }
+        .description-title{
+            font-size: 15px;
+        }
+        .logo-img {
+        width: 45px;
+    }
+}
+
+@media screen and (max-width:300px){
+        .jb-box{
+            width: 200px;
+        }
+    }
+
+</style>
+
+<body>
+    <nav class="nav-bar">
+        <img onclick="openMainPage()" src="/assets/logo 1.png" alt="" class="logo-img">
+
+    </nav>
+    <div class="job-head">
+        <h1 class="job-title"><%= job.title %></h1>
+        <h1 class="key-words"><%= job.role %></h1>
+        <h1 class="location">(<%= job.type %>)</h1>
+    </div>
+    <div class="job-details">
+        <div class="job-desciption-box jb-box">
+            <h1 class="description-title">
+                About the Job
+            </h1>
+            <h1 class="job-description">
+              <%= job.description %>
+            </h1>
+        </div>
+        <div class="job-responsibilities-box jb-box">
+            <h1 class="responsibility-title description-title">Responsibilities</h1>
+            <div class="skill-list">
+                <% if (job.responsibilities && job.responsibilities.length > 0) { %>
+                  <ul>
+                    <% for (var i = 0; i < job.responsibilities.length; i++) { %>
+                      <li class="skill"><%= job.responsibilities[i] %></li>
+                    <% } %>
+                  </ul>
+                  <% } %>
+                </div>
+        </div>
+        <div class="job-compensation-box jb-box">
+            <h1 class="compensation-title description-title">Compensation</h1>
+            <h1 class="job-description compenation-description">
+              <%= job.compensation %>
+            </h1>
+        </div>
+        <div class="visit-company jb-box">
+          <button class="apply-btn">Visit Website</button>
+        </div>
+
+    </div>
+    <div class="apply">
+      <button class="apply-btn" onclick="openApplication('<%= job.id %>')">Apply Now</button>
+    </div>
+
+    <script>
+      function openApplication(jobId){
+       let link = '/applyToJob/'+jobId;
+       window.open(link, '_self');
+      }
+      function openMainPage(){
+  window.open('/mainPage', '_self');
+}
+    </script>
+</body>
+
+</html>

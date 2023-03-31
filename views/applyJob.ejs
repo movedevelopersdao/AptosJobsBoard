@@ -1,0 +1,316 @@
+
+
+
+
+
+<!-- --------------------------------------------------------->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background: url('/assets/Background.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    .nav-bar {
+        margin: 10px 10px;
+        display: flex;
+        
+        justify-content:space-between;
+    }
+
+    .logo-img{
+        margin: 10px 10px;
+    }
+
+    .post-job-section{
+        
+        margin: 10px 10px;
+        padding: 10px 10px;
+    }
+
+    .post-job-form{
+        
+        margin: 10px 10px;
+        padding: 20px 20px;
+    }
+
+    .post-job-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 52px;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #000000;
+    }
+
+    form{
+        padding: 20px 20px;
+    }
+
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .submit{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+
+    .submit-btn{
+        background: #263238;
+        border-radius: 20px;
+        font-family: 'Poppins';
+        font-size:25px;
+        color: white;
+        padding: 10px 30px;
+    }
+
+    
+    input{
+        font-family: 'Poppins';
+        font-size:25px;
+        margin: 10px 10px;
+        border-radius: 20px;
+        padding: 10px 10px;
+        border: 1px solid #263238;
+        background: transparent;
+        width: 500px;
+    }
+
+    textarea{
+      font-family: 'Poppins';
+        font-size:25px;
+        margin: 10px 10px;
+        border-radius: 20px;
+        padding: 10px 10px;
+        border: 1px solid #263238;
+        background: transparent;
+        width: 500px;
+    }
+
+    ::-webkit-input-placeholder {
+        color:  black;
+        font-weight: 600;
+    }
+
+    .skill-container{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .resBtn{
+      font-family: 'Poppins';
+      display: block;
+      margin: auto;
+      background: #263238;
+      color: white;
+      border-radius: 15px;
+      padding: 5px 10px;
+      border: none;
+    }
+
+
+    @media screen and (max-width:1200px) {
+        body {
+            background: url('/assets/Background-for-1200.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width:500px){
+        body {
+        background: url('/assets/13\ Pro\ -\ 1.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+        input{
+            width: 400px;
+        }
+        text-align {
+          width: 400px;
+        };
+    }
+
+    @media screen and (max-width:450px){
+        input{
+            width: 300px;
+            font-size: 18px;
+        }
+        textarea{
+            width: 300px;
+            font-size: 18px;
+        }
+        .submit-btn{
+            font-size: 18px;
+        }
+        .post-job-title{
+            font-size: 28px;
+        }
+        .logo-img{
+            width: 45px;
+        }
+    }
+
+    @media screen and (max-width:350px){
+        input{
+            width: 250px;
+            font-size: 15px;
+        }
+        textarea{
+            width: 250px;
+            font-size: 15px;
+        }
+        .submit-btn{
+            font-size: 15px;
+        }
+        .post-job-title{
+            font-size: 25px;
+        }
+        
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <img onclick="openMainPage()" src="/assets/logo 1.png" alt="" class="logo-img">
+        
+    </nav>
+
+    <div class="post-job-section">
+        <div class="post-job-head">
+            <h1 class="post-job-title">Job Application</h1>
+        </div>
+
+        <div class="post-job-form">
+            <form action="" class="pj-form">
+                <div class="inputs">
+                    <div class="input"><input id="name" type="text" placeholder="Name"></div>
+                    <div class="input"><textarea id="bio" name="bio" placeholder="Write about your self (Bio)" id="" cols="20" rows="10"></textarea></div>
+                    
+                    <div class="input"><input id="twitter" type="text" placeholder="Link to Twitter"></div>
+                    <div class="input"><input id="linkedin" type="text" placeholder="Link to linkedIn"></div>
+                    <div class="input"><input id="github" type="text" placeholder="Link to GitHub"></div>
+                    <div class="input"><input id="email" type="text" placeholder="Email"></div>
+                    <div class="input"><input type="text" id="skills" class="skills" placeholder="Skills"><p class="upload-logo" style="margin: 0px 0px;font: 'Poppins';text-align: center;position: relative;bottom: 8px;">(add your skills by giving space)</p></div>
+                    
+                    <div class="input"><textarea id="pitch" name="pitch" placeholder="Why do you think you're the best fit to this job" id="" cols="30" rows="10"></textarea></div>
+                    
+                    
+                    
+                    
+                </div>
+                <div class="submit">
+                    <button class="submit-btn" id="application-form">Apply</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+      function addSkills() {
+        const container = document.getElementById("skills-container");
+        const input = document.createElement("input");
+        input.type = "text";
+        input.name = "skills[]";
+        input.required = true;
+        input.placeholder = "skill"
+        container.appendChild(input);
+      }
+
+      const form = document.getElementById('application-form');
+
+form.addEventListener('click', (event) => {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const bio = document.getElementById('bio').value;
+  const twitter = document.getElementById('twitter').value;
+  const linkedin = document.getElementById('linkedin').value;
+  const github = document.getElementById('github').value;
+  const email = document.getElementById('email').value;
+  const skills = document.getElementById('skills').value;
+  const skillsArray = skills.split(" ")
+  const pitch = document.getElementById('pitch').value;
+
+  const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+
+console.log(name + " " + bio + " " + twitter + " " + linkedin + " " +github + " " +email + " " +skills + " " + skillsArray + " " + pitch);
+// Regular expression to validate email
+const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+if (!name || !bio || !skills) {
+  alert("Name, bio, and skills are required fields.");
+  return;
+}
+
+if (twitter && !twitter.match(urlRegex)) {
+      alert("Twitter link is not valid.");
+      return;
+    }
+
+    if (linkedin && !linkedin.match(urlRegex)) {
+      alert("Linkedin link is not valid.");
+      return;
+    }
+
+    if (github && !github.match(urlRegex)) {
+      alert("Github link is not valid.");
+      return;
+    }
+
+    if (email && !email.match(emailRegex)) {
+      alert("Email is not valid.");
+      return
+    }
+
+    const subject = "Application for job position";
+    const message = `Name: ${name}\nBio: ${bio}\nTwitter: ${twitter}\nLinkedin: ${linkedin}\nGithub: ${github}\nEmail: ${email}\nSkills: ${skills}`;
+    window.job = JSON.parse('<%- JSON.stringify(job) %>');
+    console.log(window.job.email);
+    const mailTo = window.job.email
+    
+    const mailLink = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    window.location.href = mailLink;
+    
+
+
+
+
+})
+
+function openMainPage(){
+  window.open('/mainPage', '_self');
+}
+
+      
+    </script>
+    
+</body>
+</html>
