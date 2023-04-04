@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const jobSchema = new mongoose.Schema({
-  title: {
+  companyName: {
     type: String,
     required: true
   },
@@ -9,24 +9,21 @@ const jobSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+
+  typeOfPosition: {
+    type: String,
+    required: true
+  },
   description: {
     type: String,
     required: true
   },
-  
-  compensation: {
-    type: String,
+  keywordsArray: {
+    type: [String],
     required: true
   },
-  location: {
-    type: String,
-    required: true
-  },
-  type: {
-    type: String,
-    required: true
-  },
-  email: {
+
+  mail: {
     type: String,
     required: true,
     validate: {
@@ -36,15 +33,29 @@ const jobSchema = new mongoose.Schema({
       message: 'Please enter a valid email address'
     }
   },
+  domain: {
+    type: String,
+    required: true
+  },
   
-  responsibilities: {
-    type: [String],
+  location: {
+    type: String,
+    
+  },
+  remote: {
+    type: String,
+    
+  },
+  currency: {
+    type: String,
     required: true
   },
-  keywords: {
-    type: [String],
+  amount: {
+    type: String,
     required: true
   },
+  
+  
   photo: {
     type: String,
     required: true

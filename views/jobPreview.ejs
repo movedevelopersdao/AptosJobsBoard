@@ -16,7 +16,7 @@
 </head>
 <style>
     body {
-        background: url('/assets/Background.png') no-repeat center center fixed;
+        background: url('/assets/Profile\ Dashboard.png') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -33,293 +33,292 @@
         margin: 10px 10px;
     }
 
-    .job-title {
+    .job-description{
+        background: white;
+        margin: 20px 50px;
+        padding: 20px 20px;
+    }
+
+    .job-preview-title{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 600;
-        font-size: 35px;
-        line-height: 52px;
-        /* identical to box height */
-        margin-top: 15px;
-        margin-bottom: 15px;
-        text-align: center;
+        font-size: 22px;
+        line-height: 146%;
+        /* or 32px */
+
+        text-transform: capitalize;
+
+        color: #000000;
+    }
+    
+
+    .display-head{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 146%;
+        /* or 32px */
+
+        text-transform: capitalize;
 
         color: #000000;
     }
 
-    .key-words {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 48px;
-        /* identical to box height */
-        margin-bottom: 15px;
-        margin-top: 15px;
-
-        text-align: center;
-
-        color: #000000;
+    .display-desc-box{
+        /* padding: 10px 10px; */
+        border-radius: 20px;
+        border: 1px solid ;
+        opacity: 0.8;
     }
 
-    .location {
+    .display-desc{
+        margin: 10px 10px;
         font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 40px;
-        /* identical to box height */
-        margin-bottom: 15px;
-        margin-top: 15px;
+        font-size: 20px;
+        background: transparent;
         text-align: center;
-
-        color: #000000;
     }
 
-    .job-details{
-        margin: 20px 20px ;
+    .company-display{
         display: flex;
-        flex-direction: column;
+    }
+    .img-box{
+        width: 120px;
+        height: 120px;
+        /* background: gray; */
+        border-radius: 10px;
+    }
+    .img-logo{
+        width: 120px;
+        height: 120px;
+    }
+    
+
+    .company-name{
+        margin-left: 20px;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .jb-box{
-        padding: 10px 20px;
-
-        border: 1px solid black;
-        border-radius: 20px;
-        margin: 20px 20px;
-        width: 1200px;
-    }
-
-
-
-    .description-title {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 21px;
-        line-height: 32px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #000000;
-
-        opacity: 0.7;
-    }
-
-    .job-description{
-        font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 21px;
-line-height: 32px;
-text-align: center;
-
-color: #000000;
-
-opacity: 0.7;
-    }
-
-    .skill{
-        font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 21px;
-line-height: 32px;
-
-
-color: #000000;
-
-opacity: 0.7;
-    }
-
-
-    .apply{
-      margin: 20px 0px;
-    }
-    .apply-btn{
-      font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 21px;
-        line-height: 32px;
-        /* identical to box height */
+    .submit-btn {
         background: #263238;
-        text-align: center;
-        padding: 10px 20px;
-        color: #FFFFFF;
-        display: block;
-        margin: auto;
-        border-radius: 15px;
+        border-radius: 20px;
+        font-family: 'Poppins';
+        font-size: 25px;
+        color: white;
+        padding: 10px 30px;
     }
 
-    @media screen and (max-width:1200px) {
-        body {
-            background: url('/assets/Background-for-1200.png') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            background-size: cover;
-        }
-
-        .jb-box{
-            width: 800px;
-        }
+    .submit {
+        display: flex;
+        justify-content: center;
     }
 
-    @media screen and (max-width:1000px){
-        .jb-box{
-            width: 600px;
-        }
-    }
-    @media screen and (max-width:750px){
-        .jb-box{
-            width: 500px;
-        }
-        .job-title{
-            font-size: 30px;
-            line-height: 35px;
-        }
-
-        .key-words{
-            font-size: 25px;
-        }
-        
-        .location{
-            font-size: 20px;
-        }
-        .job-description{
-            font-size: 18px;
-            line-height: 35px;
-        }
-        .description-title{
-            font-size: 20px;
-        }
-        .skill{
-            font-size: 18px;
-        }
-
-    }
     @media screen and (max-width:600px){
-        .jb-box{
-            width: 400px;
-        }
+        .job-preview-title{
+        
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .display-head{
+        
+        font-weight: 500;
+        font-size: 18px;
+        
+    }
+    .display-desc{
+        
+        font-size: 18px;
+        
+    }
+    .job-description{
+        margin: 20px 30px;
+    }
+
+    .submit-btn{
+        font-size: 20px;
+    }
+    
+        
+    }
+    @media screen and (max-width:550px) {
+        
         
     }
 
-    @media screen and (max-width:500px){
-        body {
-        background: url('/assets/13\ Pro\ -\ 1.png') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-    }
-        .jb-box{
-            width: 350px;
-        }
 
-        .apply-btn{
-            font-size: 18px ;
-            padding: 10px 15px;
-        }
-       
-
-    }
-
-    @media screen and (max-width:450px){
-        .profile-detail-box{
-            width: 300px;
-        }
+    @media screen and (max-width:500px) {
         
+    }
 
+    @media screen and (max-width:450px) {
+        .img-box{
+            width: 100px;
+            height: 100px;
+        }
+        .img-logo{
+        width: 100px;
+        height: 100px;
+    }
+        .logo-img{
+            width: 45px;
+        }
+        .job-preview-title{
+        
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .display-head{
+        
+        font-weight: 500;
+        font-size: 15px;
+        
+    }
+    .display-desc{
+        
+        font-size: 15px;
+        
+    }
+    .job-description{
+        margin: 20px 30px;
+    }
+
+    .submit-btn{
+        font-size: 18px;
+    }
+    
     }
 
     @media screen and (max-width:400px){
-        .jb-box{
-            width: 250px;
-        }
-        .job-title{
-            font-size: 25px;
-            line-height: 30px;
-            margin: 10px 0px;
-        }
-        .key-words{
-            font-size: 20px;
-            margin: 10px 0px;
-        }
-        .location{
-            font-size: 15px;
-            margin: 10px 0px;
-        }
-        .skill{
-            font-size: 15px;
-        }
-        .job-description{
-            font-size: 12px;
-            line-height: 30px;
-        }
-        .description-title{
-            font-size: 15px;
-        }
-        .logo-img {
-        width: 45px;
+        .job-preview-title{
+        
+        font-weight: 550;
+        font-size: 17px;
     }
-}
-
-@media screen and (max-width:300px){
-        .jb-box{
-            width: 200px;
-        }
+    .display-head{
+        
+        font-weight: 450;
+        font-size: 13px;
+        
+    }
+    .display-desc{
+        
+        font-size: 13px;
+        
+    }
+    .job-description{
+        margin: 20px 20px;
     }
 
+    .submit-btn{
+        font-size: 16px;
+    }
+        
+
+    }
+
+    @media screen and (max-width:350px) {
+        
+        .img-box{
+            width: 60px;
+            height: 60px;
+        }
+        .img-logo{
+        width: 60px;
+        height: 60px;
+    }
+    
+    }
+    @media screen and (max-width:300px){
+        .job-preview-title{
+        
+        font-weight: 550;
+        font-size: 15px;
+    }
+    .display-head{
+        
+        font-weight: 450;
+        font-size: 11px;
+        
+    }
+    .display-desc{
+        
+        font-size: 10px;
+        
+    }
+    .job-description{
+        margin: 20px 20px;
+    }
+
+    .submit-btn{
+        font-size: 14px;
+    }
+    }
 </style>
 
 <body>
     <nav class="nav-bar">
-        <img onclick="openMainPage()" src="/assets/logo 1.png" alt="" class="logo-img">
+        <img src="/assets/logo 1.png" alt="" class="logo-img" onclick="openMainPage()">
 
     </nav>
-    <div class="job-head">
-        <h1 class="job-title"><%= job.title %></h1>
-        <h1 class="key-words"><%= job.role %></h1>
-        <h1 class="location">(<%= job.type %>)</h1>
-    </div>
-    <div class="job-details">
-        <div class="job-desciption-box jb-box">
-            <h1 class="description-title">
-                About the Job
-            </h1>
-            <h1 class="job-description">
-              <%= job.description %>
-            </h1>
+
+
+    <div class="job-description">
+        <h1 class="job-preview-title">Job Preview</h1>
+        <div class="company-display display-box">
+            <div class="img-box">
+                <img class="img-logo" src="/uploads/companies-logo/<%= job.photo %>" alt="">
+            </div>
+            <div class="company-name"><p class="display-head"><%= job.companyName %></p></div>
         </div>
-        <div class="job-responsibilities-box jb-box">
-            <h1 class="responsibility-title description-title">Responsibilities</h1>
-            <div class="skill-list">
-                <% if (job.responsibilities && job.responsibilities.length > 0) { %>
-                  <ul>
-                    <% for (var i = 0; i < job.responsibilities.length; i++) { %>
-                      <li class="skill"><%= job.responsibilities[i] %></li>
-                    <% } %>
-                  </ul>
-                  <% } %>
-                </div>
+        <div class="display-box">
+            <p class="display-head">Primary Role</p>
+            <div class="display-desc-box">
+                <p class="display-desc"><%= job.role %></p>
+            </div>
         </div>
-        <div class="job-compensation-box jb-box">
-            <h1 class="compensation-title description-title">Compensation</h1>
-            <h1 class="job-description compenation-description">
-              <%= job.compensation %>
-            </h1>
+        <div class="display-box">
+            <p class="display-head">Type of position</p>
+            <div class="display-desc-box">
+                <p class="display-desc"><%= job.typeOfPosition %></p>
+            </div>
         </div>
-        <div class="visit-company jb-box">
-          <button class="apply-btn">Visit Website</button>
+        <div class="display-box">
+            <p class="display-head">Location</p>
+            <div class="display-desc-box">
+                <!-- <p class="display-desc"><%= job.location %> <%= job.remote %></p> -->
+                <% if(job.location == ""){ %>
+                    <p class="display-desc">Remote</p>
+                <% } else { if(job.remote == 'remote') {%>
+                    <p class="display-desc"><%= job.location %> / Remote</p>
+                    <% } else { %>
+                        <p class="display-desc"><%= job.location %></p>
+                       <% } }%> 
+                       
+                    
+            </div>
+        </div>
+        <div class="display-box">
+            <p class="display-head">Job Description</p>
+            <div class="display-desc-box">
+                <p class="display-desc"><%= job.description %></p>
+            </div>
+        </div>
+        <div class="display-box">
+            <p class="display-head">Base Salary</p>
+            <div class="display-desc-box">
+                <p class="display-desc"><%= job.currency %> <%= job.amount %></p>
+            </div>
+        </div>
         </div>
 
-    </div>
-    <div class="apply">
-      <button class="apply-btn" onclick="openApplication('<%= job.id %>')">Apply Now</button>
+        
+        <div class="submit">
+            <button class="submit-btn" onclick="openApplication()">Submit</button>
+        </div>
     </div>
 
     <script>

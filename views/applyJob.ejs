@@ -17,233 +17,418 @@
     <title>Aptos Jobs Boards</title>
     <style>
         body {
-        background: url('/assets/Background.png') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-    }
-    .nav-bar {
-        margin: 10px 10px;
-        display: flex;
-        
-        justify-content:space-between;
-    }
-
-    .logo-img{
-        margin: 10px 10px;
-    }
-
-    .post-job-section{
-        
-        margin: 10px 10px;
-        padding: 10px 10px;
-    }
-
-    .post-job-form{
-        
-        margin: 10px 10px;
-        padding: 20px 20px;
-    }
-
-    .post-job-title {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 52px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #000000;
-    }
-
-    form{
-        padding: 20px 20px;
-    }
-
-    .inputs{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .submit{
-        display: flex;
-        justify-content: center;
-        margin: 20px 0px;
-    }
-
-    .submit-btn{
-        background: #263238;
-        border-radius: 20px;
-        font-family: 'Poppins';
-        font-size:25px;
-        color: white;
-        padding: 10px 30px;
-    }
-
-    
-    input{
-        font-family: 'Poppins';
-        font-size:25px;
-        margin: 10px 10px;
-        border-radius: 20px;
-        padding: 10px 10px;
-        border: 1px solid #263238;
-        background: transparent;
-        width: 500px;
-    }
-
-    textarea{
-      font-family: 'Poppins';
-        font-size:25px;
-        margin: 10px 10px;
-        border-radius: 20px;
-        padding: 10px 10px;
-        border: 1px solid #263238;
-        background: transparent;
-        width: 500px;
-    }
-
-    ::-webkit-input-placeholder {
-        color:  black;
-        font-weight: 600;
-    }
-
-    .skill-container{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .resBtn{
-      font-family: 'Poppins';
-      display: block;
-      margin: auto;
-      background: #263238;
-      color: white;
-      border-radius: 15px;
-      padding: 5px 10px;
-      border: none;
-    }
-
-
-    @media screen and (max-width:1200px) {
-        body {
-            background: url('/assets/Background-for-1200.png') no-repeat center center fixed;
+            background: url('/assets/Profile\ Dashboard.png') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
         }
-    }
 
-    @media screen and (max-width:500px){
-        body {
-        background: url('/assets/13\ Pro\ -\ 1.png') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-    }
-        input{
-            width: 400px;
-        }
-        text-align {
-          width: 400px;
-        };
-    }
+        .nav-bar {
+            margin: 10px 10px;
+            display: flex;
 
-    @media screen and (max-width:450px){
-        input{
-            width: 300px;
-            font-size: 18px;
+            justify-content: space-between;
         }
-        textarea{
-            width: 300px;
-            font-size: 18px;
-        }
-        .submit-btn{
-            font-size: 18px;
-        }
-        .post-job-title{
-            font-size: 28px;
-        }
-        .logo-img{
-            width: 45px;
-        }
-    }
 
-    @media screen and (max-width:350px){
-        input{
-            width: 250px;
-            font-size: 15px;
+        .logo-img {
+            margin: 10px 10px;
         }
-        textarea{
-            width: 250px;
-            font-size: 15px;
+
+
+
+        .post-job-form {
+            background: white;
+            margin: 10px 100px;
+            padding: 20px 20px;
         }
-        .submit-btn{
-            font-size: 15px;
+
+        .post-job-title {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 146%;
+            /* or 32px */
+
+            text-transform: capitalize;
+
+            color: #000000;
+
         }
-        .post-job-title{
+
+        form {
+            padding: 0px 20px;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around;
+        align-items: center; */
+        }
+
+        .input-check-box {
+            display: block;
+        }
+
+        .form-label {
+            display: block;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 146%;
+            /* or 29px */
+
+            text-transform: capitalize;
+
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+
+
+        .submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        .checkbox-input {
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 146%;
+            /* or 29px */
+
+            text-transform: capitalize;
+
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            background: #263238;
+            border-radius: 20px;
+            font-family: 'Poppins';
             font-size: 25px;
+            color: white;
+            padding: 10px 30px;
+        }
+
+        .form-element {
+            margin-bottom: 30px;
+        }
+
+
+        .input-field {
+            font-family: 'Poppins';
+            font-size: 20px;
+            /* margin: 10px 10px; */
+            border-radius: 20px;
+            padding: 10px 10px;
+            border: 1px solid #000000;
+            background: transparent;
+            width: 1200px;
+            opacity: 0.5;
+        }
+
+        .input-check-box {
+            margin-right: 10px;
+        }
+
+        ::-webkit-input-placeholder {
+            color: black;
+            font-weight: 500;
+        }
+
+        .currency{
+            margin-bottom: 10px;
+        }
+
+
+        @media screen and (max-width:1500px) {
+            .input-field{
+                width: 1000px;
+            }
+        }
+        @media screen and (max-width:1300px) {
+            .input-field{
+                width: 800px;
+            }
+        }
+        @media screen and (max-width:1100px) {
+            .input-field{
+                width: 600px;
+            }
+        }
+        @media screen and (max-width:900px) {
+            .input-field{
+                width: 500px;
+            }
+        }
+        @media screen and (max-width:800px) {
+            .input-field{
+                width: 500px;
+            }
+            .submit-btn {
+            
+            font-size: 20px;
+            color: white;
+            padding: 8px 25px;
+            }
+            .form-label {
+            
+            
+            
+            font-size: 15px;
+            line-height: 146%;
+            
+            }
+            .checkbox-input{
+               
+            
+            font-size: 15px;
+            line-height: 146%;
+           
+            }
+            .input-field {
+            
+            font-size: 15px;
+            
+            width: 400px;
+            
+        }
+        }
+
+        @media screen and (max-width:700px){
+            .post-job-form {
+            background: white;
+            margin: 10px 50px;
+            padding: 20px 20px;
+        }
+        }
+
+        @media screen and (max-width:600px){
+            .post-job-title {
+                font-size: 17px;
+            }
+            .input-field {
+            
+            font-size: 15px;
+            
+            width: 350px;
+            
+        }
+        }
+        @media screen and (max-width:550px) {
+            
+            .submit-btn {
+            
+            font-size: 18px;
+            color: white;
+            padding: 8px 20px;
+            }
+            .form-label {
+            
+            
+            
+            font-size: 12px;
+            line-height: 146%;
+            
+            }
+            .checkbox-input{
+               
+            
+            font-size: 12px;
+            line-height: 146%;
+           
+            }
+            .input-field {
+            
+            font-size: 12px;
+            
+            width: 300px;
+            
+        }
+        }
+
+
+        @media screen and (max-width:500px) {
+            .input-field {
+            
+            font-size: 12px;
+            
+            width: 250px;
+            
+        }
+        }
+
+        @media screen and (max-width:450px) {
+
+            .submit-btn {
+                font-size: 18px;
+            }
+
+            .post-job-form {
+            background: white;
+            margin: 10px 30px;
+            padding: 20px 20px;
+        }
+            
+
+            .logo-img {
+                width: 45px;
+            }
+        }
+
+        @media screen and (max-width:400px){
+
+            .input-field {
+            
+            font-size: 10px;
+            padding: 8px 8px;
+            width: 200px;
+            
+        }
+        .post-job-title{
+            font-size: 14px;
+        }
+
+        }
+
+        @media screen and (max-width:350px) {
+            
+            .submit-btn {
+            
+            font-size: 15px;
+            color: white;
+            padding: 8px 18px;
+            }
+            .form-label {
+            
+            
+            
+            font-size: 10px;
+            line-height: 146%;
+            
+            }
+            .checkbox-input{
+               
+            
+            font-size: 10px;
+            line-height: 146%;
+           
+            }
+            .input-field {
+            
+            font-size: 12px;
+            font-size: 8px;
+            width: 200px;
+            
+        }
+        .post-job-title{
+            font-size: 12px;
+        }
+        .post-job-form {
+            background: white;
+            margin: 10px 10px;
+            padding: 20px 10px;
+        }
+        form {
+            padding: 0px 10px;
         }
         
-    }
-
+        }
+        @media screen and (max-width:300px){
+            .input-field{
+                width: 170px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <nav class="nav-bar">
-        <img onclick="openMainPage()" src="/assets/logo 1.png" alt="" class="logo-img">
-        
+        <img src="./logo 1.png" alt="" class="logo-img">
+
     </nav>
 
-    <div class="post-job-section">
-        <div class="post-job-head">
-            <h1 class="post-job-title">Job Application</h1>
-        </div>
 
-        <div class="post-job-form">
-            <form action="" class="pj-form">
-                <div class="inputs">
-                    <div class="input"><input id="name" type="text" placeholder="Name"></div>
-                    <div class="input"><textarea id="bio" name="bio" placeholder="Write about your self (Bio)" id="" cols="20" rows="10"></textarea></div>
-                    
-                    <div class="input"><input id="twitter" type="text" placeholder="Link to Twitter"></div>
-                    <div class="input"><input id="linkedin" type="text" placeholder="Link to linkedIn"></div>
-                    <div class="input"><input id="github" type="text" placeholder="Link to GitHub"></div>
-                    <div class="input"><input id="email" type="text" placeholder="Email"></div>
-                    <div class="input"><input type="text" id="skills" class="skills" placeholder="Skills"><p class="upload-logo" style="margin: 0px 0px;font: 'Poppins';text-align: center;position: relative;bottom: 8px;">(add your skills by giving space)</p></div>
-                    
-                    <div class="input"><textarea id="pitch" name="pitch" placeholder="Why do you think you're the best fit to this job" id="" cols="30" rows="10"></textarea></div>
-                    
-                    
-                    
-                    
+    <div class="post-job-form">
+
+        <form action="" class="pj-form">
+
+            <h1 class="post-job-title form-element">Apply to the job</h1>
+
+            <div class="inputs">
+                <div class="input form-element">
+                    <label class="form-label" for="Company-name">Name</label>
+                    <input type="text" id="name" class="input-field" placeholder="">
                 </div>
-                <div class="submit">
-                    <button class="submit-btn" id="application-form">Apply</button>
+                <div class="input form-element">
+                    <label class="form-label" for="bio">BIO</label>
+                    <textarea name="bio" type="text"  class="input-field" id="bio" cols="30"
+                        rows="8"></textarea>
                 </div>
 
-            </form>
-        </div>
+                <div class="input form-element">
+                    <label class="form-label" for="primary-role">Email</label>
+                    <input type="text" id="email" class="input-field"
+                        placeholder="">
+                </div>
 
+                <div class="input form-element">
+                    <label class="form-label" for="linkedin">LinkedIn</label>
+                    <input type="text" id="linkedin" class="input-field"
+                        placeholder="https://">
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="twitter">Twitter</label>
+                    <input type="text" id="twitter" class="input-field"
+                        placeholder="https://">
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="github">GitHub</label>
+                    <input type="text" id="github" class="input-field"
+                        placeholder="https://">
+                </div>
+                
+
+                <div class="input form-element">
+                    <label class="form-label" for="skills">skills</label>
+                    <input type="text" id="skills" class="input-field"
+                        placeholder="e.g: FrontEnd, BackEnd, Community">
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="pitch">Why do you think you're best for this role</label>
+                    <textarea name="bio" type="text"  class="input-field" id="pitch" cols="30"
+                        rows="8"></textarea>
+                </div>
+
+                
+
+                
+
+
+            </div>
+            
+
+        </form>
+        <div class="submit">
+            <button class="submit-btn" id="application-form">Submit</button>
+        </div>
     </div>
 
     
 
     <script>
-      function addSkills() {
-        const container = document.getElementById("skills-container");
-        const input = document.createElement("input");
-        input.type = "text";
-        input.name = "skills[]";
-        input.required = true;
-        input.placeholder = "skill"
-        container.appendChild(input);
-      }
+      
 
       const form = document.getElementById('application-form');
 

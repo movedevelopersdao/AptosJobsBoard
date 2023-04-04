@@ -90,11 +90,13 @@ app.get('/search', async (req, res) => {
   
 const query = req.query;
 const titleQuery = query.title ? { $or: [
-  { title: { $regex: query.title, $options: 'i' } },
-  { responsibilities: { $regex: query.title, $options: 'i' } },
-  { keywords: {$regex: query.title, $options: 'i'}}
+  { companyName: { $regex: query.title, $options: 'i' } },
+  { role: { $regex: query.title, $options: 'i' } },
+  { keywords: {$regex: query.title, $options: 'i'}},
+  { typeOfPosition: {$regex: query.title, $options: 'i'}},
+  { domain: {$regex: query.title, $options: 'i'}}
 ]} : {};
-const locationQuery = query.location ? { location: { $regex: query.location, $options: 'i' } } : {};
+const locationQuery = query.location ? { $or: [{location: { $regex: query.location, $options: 'i' }}, { remote: { $regex: query.location, $options: 'i' }} ] } : {};
 const jobs = await Job.find({ $and: [titleQuery, locationQuery] });
 res.render('mainPage', {jobs});
 });
@@ -130,31 +132,37 @@ app.get('/newjob', (req,res)=>{
   res.render('newJob');
 })
 
-app.post('/postJob',upload.single('company-logo') , async (req, res)=>{
+app.post('/postJob',upload.single('photo') , async (req, res)=>{
 
 
-
-  const { title,role, description, compensation, location, type, email, responsibilities,keywords } = req.body;
-  
+  const {companyName, role, typeOfPosition, description, keywords, mail, domain, location, remote, currency, amount } = req.body;
+  // const { title,role, description, compensation, location, type, email, responsibilities,keywords } = req.body;
+  let remoteString;
+  if (remote == "on"){
+    remoteString = "remote";
+  }else{
+    remoteString = "";
+  }
   console.log(req.body);
-  console.log(req.file.filename);
-  console.log(responsibilities);
-  console.log(keywords);
+  const keywordsArray = keywords.split(" ")
+ 
   try {
     const job = new Job({
-      title,
-      description,
+      companyName,
       role,
-      compensation,
+      typeOfPosition: typeOfPosition[0],
+      description,
+      keywordsArray,
+      mail,
+      domain,
       location,
-      type,
-      email,
-      responsibilities,
-      keywords,
+      remote: remoteString,
+      currency,
+      amount,
       photo: req.file.filename
     });
     await job.save();
-    res.redirect('/mainPage');
+    res.json({msg : "redirected"});
   } catch (error) {
     console.error(error);
     res.render('error');

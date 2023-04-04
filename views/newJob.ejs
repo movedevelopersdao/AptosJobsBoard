@@ -8,255 +8,507 @@
     <title>Aptos Jobs Boards</title>
     <style>
         body {
-        background: url('/assets/Background.png') no-repeat center center fixed;
+        background: url('/assets/Profile\ Dashboard.png') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
     }
     .nav-bar {
-        margin: 10px 10px;
-        display: flex;
-        
-        justify-content:space-between;
-    }
+            margin: 10px 10px;
+            display: flex;
 
-    .logo-img{
-        margin: 10px 10px;
-    }
-
-    .post-job-section{
-        
-        margin: 10px 10px;
-        padding: 10px 10px;
-    }
-
-    .post-job-form{
-        
-        margin: 10px 10px;
-        padding: 20px 20px;
-    }
-
-    .post-job-title {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 52px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #000000;
-    }
-
-    form{
-        padding: 20px 20px;
-    }
-
-    .inputs{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .submit{
-        display: flex;
-        justify-content: center;
-    }
-
-    .submit-btn{
-        background: #263238;
-        border-radius: 20px;
-        font-family: 'Poppins';
-        font-size:25px;
-        color: white;
-        padding: 10px 30px;
-    }
-
-    
-    input{
-        font-family: 'Poppins';
-        font-size:25px;
-        margin: 10px 10px;
-        border-radius: 20px;
-        padding: 10px 10px;
-        border: 1px solid #263238;
-        background: transparent;
-        width: 500px;
-    }
-
-    ::-webkit-input-placeholder {
-        color:  black;
-        font-weight: 600;
-    }
-
-    .responsibilities{
-      display: flex;
-      flex-direction: column;
-    }
-
-    #responsibilities-container{
-      display: flex;
-      flex-direction: column ;
-    }
-
-    #keywords-container{
-      display: flex;
-      flex-direction: column ;
-    }
-
-    .resBtn{
-      font-family: 'Poppins';
-      display: block;
-      margin: auto;
-      background: #263238;
-      color: white;
-      border-radius: 15px;
-      padding: 5px 10px;
-      border: none;
-    }
-
-
-    @media screen and (max-width:1200px) {
-        body {
-            background: url('/assets/Background-for-1200.png') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            background-size: cover;
+            justify-content: space-between;
         }
-    }
 
-    @media screen and (max-width:500px){
-        body {
-        background: url('/assets/13\ Pro\ -\ 1.png') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-    }
-        input{
-            width: 400px;
+        .logo-img {
+            margin: 10px 10px;
         }
-    }
 
-    @media screen and (max-width:450px){
-        input{
-            width: 300px;
-            font-size: 18px;
-        }
-        .submit-btn{
-            font-size: 18px;
-        }
-        .post-job-title{
-            font-size: 28px;
-        }
-        .logo-img{
-            width: 45px;
-        }
-    }
 
-    @media screen and (max-width:350px){
-        input{
-            width: 250px;
-            font-size: 15px;
+
+        .post-job-form {
+            background: white;
+            margin: 10px 100px;
+            padding: 20px 20px;
         }
-        .submit-btn{
-            font-size: 15px;
+
+        .post-job-title {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 146%;
+            /* or 32px */
+
+            text-transform: capitalize;
+
+            color: #000000;
+
         }
-        .post-job-title{
+
+        form {
+            padding: 0px 20px;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around;
+        align-items: center; */
+        }
+
+        .input-check-box {
+            display: block;
+        }
+
+        .form-label {
+            display: block;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 146%;
+            /* or 29px */
+
+            text-transform: capitalize;
+
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+
+
+
+        .submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        .checkbox-input {
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 146%;
+            /* or 29px */
+
+            text-transform: capitalize;
+
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            background: #263238;
+            border-radius: 20px;
+            font-family: 'Poppins';
             font-size: 25px;
+            color: white;
+            padding: 10px 30px;
+        }
+
+        .form-element {
+            margin-bottom: 30px;
+        }
+
+
+        .input-field {
+            font-family: 'Poppins';
+            font-size: 20px;
+            /* margin: 10px 10px; */
+            border-radius: 20px;
+            padding: 10px 10px;
+            border: 1px solid #000000;
+            background: transparent;
+            width: 1200px;
+            opacity: 0.5;
+        }
+
+        .input-check-box {
+            margin-right: 10px;
+        }
+
+        ::-webkit-input-placeholder {
+            color: black;
+            font-weight: 500;
+        }
+
+        .currency{
+            margin-bottom: 10px;
+        }
+
+
+        @media screen and (max-width:1500px) {
+            .input-field{
+                width: 1000px;
+            }
+        }
+        @media screen and (max-width:1300px) {
+            .input-field{
+                width: 800px;
+            }
+        }
+        @media screen and (max-width:1100px) {
+            .input-field{
+                width: 600px;
+            }
+        }
+        @media screen and (max-width:900px) {
+            .input-field{
+                width: 500px;
+            }
+        }
+        @media screen and (max-width:800px) {
+            .input-field{
+                width: 500px;
+            }
+            .submit-btn {
+            
+            font-size: 20px;
+            color: white;
+            padding: 8px 25px;
+            }
+            .form-label {
+            
+            
+            
+            font-size: 15px;
+            line-height: 146%;
+            
+            }
+            .checkbox-input{
+               
+            
+            font-size: 15px;
+            line-height: 146%;
+           
+            }
+            .input-field {
+            
+            font-size: 15px;
+            
+            width: 400px;
+            
+        }
+        }
+
+        @media screen and (max-width:700px){
+            .post-job-form {
+            background: white;
+            margin: 10px 50px;
+            padding: 20px 20px;
+        }
+        }
+
+        @media screen and (max-width:600px){
+            .post-job-title {
+                font-size: 17px;
+            }
+            .input-field {
+            
+            font-size: 15px;
+            
+            width: 350px;
+            
+        }
+        }
+        @media screen and (max-width:550px) {
+            
+            .submit-btn {
+            
+            font-size: 18px;
+            color: white;
+            padding: 8px 20px;
+            }
+            .form-label {
+            
+            
+            
+            font-size: 12px;
+            line-height: 146%;
+            
+            }
+            .checkbox-input{
+               
+            
+            font-size: 12px;
+            line-height: 146%;
+           
+            }
+            .input-field {
+            
+            font-size: 12px;
+            
+            width: 300px;
+            
+        }
+        }
+
+
+        @media screen and (max-width:500px) {
+            .input-field {
+            
+            font-size: 12px;
+            
+            width: 250px;
+            
+        }
+        }
+
+        @media screen and (max-width:450px) {
+
+            .submit-btn {
+                font-size: 18px;
+            }
+
+            .post-job-form {
+            background: white;
+            margin: 10px 30px;
+            padding: 20px 20px;
+        }
+            
+
+            .logo-img {
+                width: 45px;
+            }
+        }
+
+        @media screen and (max-width:400px){
+
+            .input-field {
+            
+            font-size: 10px;
+            padding: 8px 8px;
+            width: 200px;
+            
+        }
+        .post-job-title{
+            font-size: 14px;
+        }
+
+        }
+
+        @media screen and (max-width:350px) {
+            
+            .submit-btn {
+            
+            font-size: 15px;
+            color: white;
+            padding: 8px 18px;
+            }
+            .form-label {
+            
+            
+            
+            font-size: 10px;
+            line-height: 146%;
+            
+            }
+            .checkbox-input{
+               
+            
+            font-size: 10px;
+            line-height: 146%;
+           
+            }
+            .input-field {
+            
+            font-size: 12px;
+            font-size: 8px;
+            width: 200px;
+            
+        }
+        .post-job-title{
+            font-size: 12px;
+        }
+        .post-job-form {
+            background: white;
+            margin: 10px 10px;
+            padding: 20px 10px;
+        }
+        form {
+            padding: 0px 10px;
         }
         
-    }
-
+        }
+        @media screen and (max-width:300px){
+            .input-field{
+                width: 170px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <nav class="nav-bar">
-        <img onclick="openMainPage()" src="/assets/logo 1.png" alt="" class="logo-img">
-        
+        <img src="assets/logo 1.png" alt="" class="logo-img">
+
     </nav>
 
-    <div class="post-job-section">
-        <div class="post-job-head">
-            <h1 class="post-job-title">Post A Job</h1>
-        </div>
 
-        <div class="post-job-form">
-            <form action="/postJob" class="pj-form" method="POST"  enctype="multipart/form-data">>
-                <div class="inputs">
-                    <div class="input"><input type="text" class="form-control" id="title" name="title" required placeholder="Company Name"></div>
-                    <div class="input"><input type="text" class="form-control" id="role" name="role" required placeholder="Role"></div>
-                    <div class="input"><input type="text" class="form-control" id="description" name="description" required placeholder="Description"></div>
-                    <div class="input"><input type="text" class="form-control" id="compensation" name="compensation" required placeholder="Compensation per month"></div>
-                    <div class="input"><input type="text" class="form-control" id="location" name="location" placeholder="Location"></div>
-                    <div class="input"><input type="text" class="form-control" id="type" name="type" placeholder="Type (fullTime/remote)"></div>
-                    <div class="input"><input type="text" class="form-control" id="mail" name="email" placeholder="Mail"></div>
-                    <!-- <div class="input"><input type="text" class="form-control" id="companyLink" name="comanyLink" placeholder="comanyLink"></div> -->
-                    <div class="input"><input type="text" class="responsibilities" name="responsibilities[]" id="responsibilities" required placeholder="responsibilities">
-                      <button type="button" class="resBtn" onclick="addResponsibility()">Add Responsibility</button>
-                      <div id="responsibilities-container"></div></div>
-                      <div class="input"><input type="text" class="responsibilities" name="keywords[]" id="keywords" required placeholder="keywords(tech/backend/frontend)">
-                        <button type="button" class="keyBtn resBtn" onclick="addKeywords()">Add keyword</button>
-                        <div id="keywords-container"></div></div>
-                    <div class="input"><input type="file" class="form-control-file" id="photo" name="company-logo" accept="image/*" placeholder="Logo if available"><p class="upload-logo" style="margin: 0px 0px;font: 'Poppins';text-align: center;position: relative;bottom: 8px;">(upload Company Logo)</p></div>
+    <div class="post-job-form">
+
+        <form action="/postJob" class="pj-form" method="post" enctype="multipart/form-data">
+
+            <h1 class="post-job-title form-element">Tell us about the position</h1>
+
+            <div class="inputs">
+                <div class="input form-element">
+                    <label class="form-label" for="Company-name">Company name</label>
+                    <input type="text" id="Company-name" name="companyName" class="input-field" placeholder="Comapny Name" required>
+                </div>
+                <div class="input form-element">
+                    <label class="form-label" for="primary-role">Primary Role</label>
+                    <input type="text" id="primary-role" class="input-field" name="role"
+                        placeholder="e.g: Blockchain Developer, Community Manager" required>
+                </div>
+                <div class="input form-element">
+                    <label for="typeOfPosition" class="form-label">Type of Position</label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Full Time" name="typeOfPosition[]" class="input-check-box" id="full_time">
+                        Full Time
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Part time" name="typeOfPosition[]" class="input-check-box" id="part_time">
+                        Part Time
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Contract" name="typeOfPosition[]" class="input-check-box" id="contract">
+                        Contract
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Freelance" name="typeOfPosition[]" class="input-check-box" id="freelance">
+                        Freelance
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Internship" name="typeOfPosition[]" class="input-check-box" id="internship">
+                        Internship
+                    </label>
+
                 </div>
 
-                <div class="submit">
+                <div class="input form-element">
+                    <label class="form-label" for="job-description">Job Description</label>
+                    <textarea name="description"  class="input-field" id="description" cols="30"
+                        rows="8" required></textarea>
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="keywords">KeyWords(options)</label>
+                    <input type="text" id="keywords" class="input-field" name="keywords"
+                        placeholder="e.g: Bitcoin, DeFi, Non-Tech, Solidity">
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="text" id="mail" class="input-field" name="mail"
+                        placeholder="" required>
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="email">Job domain</label>
+                    <input type="text" id="domain" class="input-field" name="domain"
+                        placeholder="eg: Design, Tech, Marketing" required>
+                </div>
+
+                <div class="input form-element">
+                    <label for="base_salary" class="form-label">Location</label>
+                    <input type="text" id="location" class="location input-field" name="location"
+                        placeholder="eg: Bengaluru,India" name="location"">
+                        <label class="checkbox-input">
+                            <input type="checkbox" name="remote" class="input-check-box" id="remote">
+                            Remote Job
+                        </label>
+                    
+                </div>
+
+                <div class="input form-element">
+                    <label for="base_salary" class="form-label">Base Salary</label>
+                    <input type="text" id="base_salary_currency" class="currency input-field" name="currency"
+                        placeholder="Currency">
+                    <input type="text" id="base_salary_amount" class="amount input-field" name="amount"
+                        placeholder="Amount Range(low-high)" required>
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="email">Company logo(Kepp it 120 px 120px)</label>
+                    <input type="file" id="photo" class="input-field" name="photo"
+                        placeholder="" required>
+                </div>
+
+            </div>
             
-                    <button class="submit-btn" id="application-form">Submit</button>
-                </div>
-
-            </form>
-        </div>
-
+            <div class="submit">
+                <button type="submit" class="submit-btn" id="application-form" >Submit</button>
+            </div>
+        </form>
+        
     </div>
 
+
     <script>
-      function addResponsibility() {
-        const container = document.getElementById("responsibilities-container");
-        const input = document.createElement("input");
-        input.type = "text";
-        input.name = "responsibilities[]";
-        input.required = true;
-        input.placeholder = "responsibilities"
-        container.appendChild(input);
-      }
-      function addKeywords() {
-        const container = document.getElementById("keywords-container");
-        const input = document.createElement("input");
-        input.type = "text";
-        input.name = "responsibilities[]";
-        input.required = true;
-        input.placeholder = "keywords(tech/backend/frontend)"
-        container.appendChild(input);
-      }
+      
 
       function openMainPage(){
   window.open('/', '_self');
     }
 
+    const checkboxes = document.getElementsByName("typeOfPosition[]");
+for (let i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].addEventListener("click", function() {
+    if (this.checked) {
+      for (let j = 0; j < checkboxes.length; j++) {
+        if (checkboxes[j] !== this) {
+          checkboxes[j].checked = false;
+        }
+      }
+    }
+  });
+}
+
     const form = document.getElementById('application-form');
 
     form.addEventListener('click',(event)=>{
-    
-    const title = document.getElementById('title');
-    const role = document.getElementById('role');
+   
+    const companyName = document.getElementById('Company-name');
+    const primaryRole = document.getElementById('primary-role');
     const description = document.getElementById('description');
-    const compensation = document.getElementById('compensation');
+    const position = document.getElementsByName('typeOfPosition[]');
     const location = document.getElementById('location');
-    const type = document.getElementById('type');
+    const remote = document.getElementById('remote');
+    
     const mail = document.getElementById('mail');
-    const responsibilities = document.getElementById('responsibilities');
+    const base_salary_currency = document.getElementById('base_salary_currency');
+    const base_salary_amount = document.getElementById('base_salary_amount');
+    
     const keywords = document.getElementById('keywords');
+    
     const photo = document.getElementById('photo');
 
-    if (!title || !role || !description || !compensation || !location || !type || responsibilities.length == 0 || keywords.length == 0 || photo.value.length == 0)  {
+    // !companyName || !primaryRole || !description || !location || photo.value.length == 0
+    
+    if ( companyName.value == "" || primaryRole.value == "" || description.value == "" || location.value == "" || photo.value.length == 0)  {
         alert("All fields are required fields.");
         event.preventDefault();
         return;
     }
+    
+    let checked = false
+    for(let i=0; i< position.length; i++){
+        if(position[i].checked == true){
+            checked = true;
+        }
+    }
+
+    if(!checked){
+        alert("select type of position");
+        event.preventDefault();
+        return;
+    }
+
 
     const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
     console.log(mail.value.match(emailRegex));
@@ -266,6 +518,7 @@
       return
     }
     })
+    
     </script>
 
     
