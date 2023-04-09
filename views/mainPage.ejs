@@ -833,8 +833,8 @@ button {
       <% jobs.forEach(job => { %>
         <div class="job-box" onclick="openJobPreview('<%= job.id %>')">
             <div class="company-logo">
-                <div class="company-logo-box">
-                  <img class="company-logo-img" src="/uploads/companies-logo/<%= job.photo %>" alt="Job Photo">
+                <div class="company-logo-box" style="background: url('/uploads/companies-logo/<%= job.photo %>'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                  <!-- <img class="company-logo-img" src="/uploads/companies-logo/<%= job.photo %>" alt="Job Photo"> -->
                 </div>
             </div>
             <div class="job-description">

@@ -162,7 +162,7 @@ app.post('/postJob',upload.single('photo') , async (req, res)=>{
       photo: req.file.filename
     });
     await job.save();
-    res.json({msg : "redirected"});
+    res.redirect('/');
   } catch (error) {
     console.error(error);
     res.render('error');

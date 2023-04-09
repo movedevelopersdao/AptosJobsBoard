@@ -344,7 +344,7 @@
 <body>
 
     <nav class="nav-bar">
-        <img src="assets/logo 1.png" alt="" class="logo-img">
+        <img src="assets/logo 1.png" alt="" class="logo-img" onclick="openMainPage()">
 
     </nav>
 
@@ -434,7 +434,7 @@
                 </div>
 
                 <div class="input form-element">
-                    <label class="form-label" for="email">Company logo(Kepp it 120 px 120px)</label>
+                    <label class="form-label" for="email">Company logo(Kepp it 100 px 100px)</label>
                     <input type="file" id="photo" class="input-field" name="photo"
                         placeholder="" required>
                 </div>
@@ -490,7 +490,7 @@ for (let i = 0; i < checkboxes.length; i++) {
 
     // !companyName || !primaryRole || !description || !location || photo.value.length == 0
     
-    if ( companyName.value == "" || primaryRole.value == "" || description.value == "" || location.value == "" || photo.value.length == 0)  {
+    if ( companyName.value == "" || primaryRole.value == "" || description.value == ""  || photo.value.length == 0)  {
         alert("All fields are required fields.");
         event.preventDefault();
         return;

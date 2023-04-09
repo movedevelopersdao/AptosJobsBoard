@@ -269,8 +269,8 @@
     <div class="job-description">
         <h1 class="job-preview-title">Job Preview</h1>
         <div class="company-display display-box">
-            <div class="img-box">
-                <img class="img-logo" src="/uploads/companies-logo/<%= job.photo %>" alt="">
+            <div class="img-box" style="background: url('/uploads/companies-logo/<%= job.photo %>'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                <!-- <img class="img-logo" src="/uploads/companies-logo/<%= job.photo %>" alt=""> -->
             </div>
             <div class="company-name"><p class="display-head"><%= job.companyName %></p></div>
         </div>
@@ -317,7 +317,7 @@
 
         
         <div class="submit">
-            <button class="submit-btn" onclick="openApplication()">Submit</button>
+            <button class="submit-btn" onclick="openApplication()">Apply</button>
         </div>
     </div>
 
