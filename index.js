@@ -163,8 +163,10 @@ app.post('/postJob',upload.single('photo') , async (req, res)=>{
       amount,
       photo: req.file.filename
     });
+    
     await job.save();
-    res.redirect('/');
+    // res.redirect('/');
+    res.json(job);
   } catch (error) {
     console.error(error);
     res.render('error');
