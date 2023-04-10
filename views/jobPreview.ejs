@@ -287,6 +287,12 @@
             </div>
         </div>
         <div class="display-box">
+            <p class="display-head">Domain</p>
+            <div class="display-desc-box">
+                <p class="display-desc"><%= job.domain %></p>
+            </div>
+        </div>
+        <div class="display-box">
             <p class="display-head">Location</p>
             <div class="display-desc-box">
                 <!-- <p class="display-desc"><%= job.location %> <%= job.remote %></p> -->
@@ -302,9 +308,21 @@
             </div>
         </div>
         <div class="display-box">
+            <p class="display-head">Website</p>
+            <div onclick="openWebsite('<%= job.website %>')" class="display-desc-box">
+                <p class="display-desc"><%= job.website %></p>
+            </div>
+        </div>
+        <div class="display-box">
             <p class="display-head">Job Description</p>
             <div class="display-desc-box">
                 <p class="display-desc"><%= job.description %></p>
+            </div>
+        </div>
+        <div class="display-box">
+            <p class="display-head">Job Requirements</p>
+            <div class="display-desc-box">
+                <p class="display-desc"><%= job.requirements %></p>
             </div>
         </div>
         <div class="display-box">
@@ -329,6 +347,11 @@
       function openMainPage(){
   window.open('/', '_self');
 }
+
+    function openWebsite(link){
+        window.open(link, '_self');
+    }
+
     </script>
 </body>
 

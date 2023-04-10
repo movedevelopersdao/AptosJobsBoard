@@ -18,6 +18,10 @@ const jobSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  requirements: {
+    type: String,
+    required: true
+  },
   keywordsArray: {
     type: [String],
     required: true
@@ -32,6 +36,10 @@ const jobSchema = new mongoose.Schema({
       },
       message: 'Please enter a valid email address'
     }
+  },
+  website: {
+    type: String,
+    required: true
   },
   domain: {
     type: String,

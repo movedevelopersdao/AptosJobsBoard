@@ -397,7 +397,13 @@
                 </div>
 
                 <div class="input form-element">
-                    <label class="form-label" for="keywords">KeyWords(options)</label>
+                    <label class="form-label" for="job-description">Job Requirements</label>
+                    <textarea name="requirements"  class="input-field" id="requirements" cols="30"
+                        rows="8" required></textarea>
+                </div>
+
+                <div class="input form-element">
+                    <label class="form-label" for="keywords">KeyWords(seperate by ,)</label>
                     <input type="text" id="keywords" class="input-field" name="keywords"
                         placeholder="e.g: Bitcoin, DeFi, Non-Tech, Solidity">
                 </div>
@@ -409,9 +415,41 @@
                 </div>
 
                 <div class="input form-element">
-                    <label class="form-label" for="email">Job domain</label>
-                    <input type="text" id="domain" class="input-field" name="domain"
-                        placeholder="eg: Design, Tech, Marketing" required>
+                    <label class="form-label" for="website">Website</label>
+                    <input type="text" id="website" name="website" class="input-field" placeholder="Website/Github/LinkedIn" required>
+                </div>
+
+                <div class="input form-element">
+                    <label for="typeOfPosition" class="form-label">Domain</label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Design" name="typeOfDomain[]" class="input-check-box" id="design">
+                        Design
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Development" name="typeOfDomain[]" class="input-check-box" id="development">
+                        Developement
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Management" name="typeOfDomain[]" class="input-check-box" id="management">
+                        Management
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Marketing" name="typeOfDomain[]" class="input-check-box" id="marketing">
+                        Marketing
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Customer Service" name="typeOfDomain[]" class="input-check-box" id="customer_service">
+                        Customer Service
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Finance" name="typeOfDomain[]" class="input-check-box" id="finance">
+                        Finance
+                    </label>
+                    <label class="checkbox-input">
+                        <input type="checkbox" value="Operations" name="typeOfDomain[]" class="input-check-box" id="operations">
+                        Operations
+                    </label>
+
                 </div>
 
                 <div class="input form-element">
@@ -434,7 +472,7 @@
                 </div>
 
                 <div class="input form-element">
-                    <label class="form-label" for="email">Company logo(Kepp it 100 px 100px)</label>
+                    <label class="form-label" for="email">Company logo(Keep it 100 px-100px)</label>
                     <input type="file" id="photo" class="input-field" name="photo"
                         placeholder="" required>
                 </div>
@@ -469,6 +507,19 @@ for (let i = 0; i < checkboxes.length; i++) {
   });
 }
 
+const checkboxes2 = document.getElementsByName("typeOfDomain[]");
+for (let i = 0; i < checkboxes2.length; i++) {
+  checkboxes2[i].addEventListener("click", function() {
+    if (this.checked) {
+      for (let j = 0; j < checkboxes2.length; j++) {
+        if (checkboxes2[j] !== this) {
+          checkboxes2[j].checked = false;
+        }
+      }
+    }
+  });
+}
+
     const form = document.getElementById('application-form');
 
     form.addEventListener('click',(event)=>{
@@ -476,9 +527,12 @@ for (let i = 0; i < checkboxes.length; i++) {
     const companyName = document.getElementById('Company-name');
     const primaryRole = document.getElementById('primary-role');
     const description = document.getElementById('description');
+    const requirements = document.getElementById('requirements');
     const position = document.getElementsByName('typeOfPosition[]');
+    const domain = document.getElementsByName('typeOfDomain[]');
     const location = document.getElementById('location');
     const remote = document.getElementById('remote');
+    const website = document.getElementById('website');
     
     const mail = document.getElementById('mail');
     const base_salary_currency = document.getElementById('base_salary_currency');
@@ -490,7 +544,7 @@ for (let i = 0; i < checkboxes.length; i++) {
 
     // !companyName || !primaryRole || !description || !location || photo.value.length == 0
     
-    if ( companyName.value == "" || primaryRole.value == "" || description.value == ""  || photo.value.length == 0)  {
+    if ( companyName.value == "" || primaryRole.value == "" || description.value == ""  || requirements.value == ""  || website.value == ""  ||  photo.value.length == 0)  {
         alert("All fields are required fields.");
         event.preventDefault();
         return;
@@ -503,7 +557,21 @@ for (let i = 0; i < checkboxes.length; i++) {
         }
     }
 
+
     if(!checked){
+        alert("select type of position");
+        event.preventDefault();
+        return;
+    }
+
+    let checked2 = false
+    for(let i=0; i< domain.length; i++){
+        if(domain[i].checked == true){
+            checked2 = true;
+        }
+    }
+
+    if(!checked2){
         alert("select type of position");
         event.preventDefault();
         return;

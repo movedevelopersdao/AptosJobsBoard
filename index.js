@@ -135,7 +135,7 @@ app.get('/newjob', (req,res)=>{
 app.post('/postJob',upload.single('photo') , async (req, res)=>{
 
 
-  const {companyName, role, typeOfPosition, description, keywords, mail, domain, location, remote, currency, amount } = req.body;
+  const {companyName, role, typeOfPosition, description, requirements, keywords, mail, website, typeOfDomain, location, remote, currency, amount } = req.body;
   // const { title,role, description, compensation, location, type, email, responsibilities,keywords } = req.body;
   let remoteString;
   if (remote == "on"){
@@ -154,7 +154,9 @@ app.post('/postJob',upload.single('photo') , async (req, res)=>{
       description,
       keywordsArray,
       mail,
-      domain,
+      website,
+      domain: typeOfDomain[0],
+      requirements,
       location,
       remote: remoteString,
       currency,
