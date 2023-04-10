@@ -482,8 +482,8 @@ if (twitter && !twitter.match(urlRegex)) {
     const subject = "Application for job position";
     const message = `Name: ${name}\nBio: ${bio}\nTwitter: ${twitter}\nLinkedin: ${linkedin}\nGithub: ${github}\nEmail: ${email}\nSkills: ${skills}`;
     window.job = JSON.parse('<%- JSON.stringify(job) %>');
-    console.log(window.job.email);
-    const mailTo = window.job.email
+    console.log(window.job.mail);
+    const mailTo = window.job.mail
     
     const mailLink = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     window.location.href = mailLink;
